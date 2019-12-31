@@ -1,0 +1,5 @@
+1.生命周期:
+-- 组件初始化(componentDidMount):create --->constructor--->render--->dom和refs--->节点
+-- 组件更新(componentDidUpdate)：new props ,setState(),forceUpdate()
+-- 组件卸载(componentWillUnmount)：从dom节点卸载
+

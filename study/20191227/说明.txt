@@ -1,2 +1,25 @@
 1.React无论从性能上（得益于Virtual DOM）还是思想上（组件化）都更为先进
-2.声明式的写法、组件化
+2.声明式的写法、组件化、一次学习，随处编写
+3.官方脚手架工具：create-react-app
+--脚手架工具：命令行工具，提供一系列框架的功能，启动开发服务器等等
+--前提设备:node.js 以及 npm(Node Package Manager 包管理工具) node -v
+    -- npm:Node.js的包管理工具
+    -- npm已经在Node.js安装的时候顺带装好了  npm -v
+    -- 升级npm => npm install npm@latest -g
+    -- Node.js =>运行js的一个虚拟机
+-- 安装:npm install create-react-app -g(全局变量)-->可以通过配置更改node.js全局配置
+-- 新建项目：如何指定目录，可以先cd到该目录下：create-react-app 项目名---->这里要设置path
+-- 启动服务：npm start  --package.json  -- windows=>type --linux cat
+4.组件： README.md：帮助文档
+        package.json:（dependencies）依赖文件,scripts命令
+        public:公共文件，index.html:主文件
+        index.html:<div id="root"></div>程序的主入口
+        index.js ===>主入口文件，所有组件在这里挂载
+        ReactDOM ===>处理ReactDOM相关功能
+        不推荐将js文件或者css等等文件放在public目录下，原因：因为脚本架底层是Webpack工作
+        详解：见组件
+5.Webpack:模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用
+可以查看图：分析如下：中间那个是webpack的图标，可以看作webpack这个工具。左边是我们项目生产环境下所以来的包，通过这个webpack工具我们可以打包所有的图片，所以的脚本，所有的样式等等，
+最后打包成了右边的静态资源文件。
+注意了：每个webpack的版本都有不同的功能，而且高版本的webpack可能会出现意想不到的bug，在这里推荐大家使用2版本的webpack。
+另外webpack还支持我们的模块化加载, 这让我们更加快速的开发。

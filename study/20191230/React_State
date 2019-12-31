@@ -1,0 +1,26 @@
+1.State (状态) 可以改变，但不能随意改变
+-- 组件内部的数据可以动态修改
+-- this.setState() 是更新state的唯一方法
+2.需要增加构造器
+constructor(props) {
+        //调用super
+        super(props);
+        //state
+        this.state = {
+            likes:0
+        };
+        //1.绑定addLikes方法
+        //this.addLikes = this.addLikes.bind(this);
+}
+
+3.方法绑定 两种方案： bind  ()=>{}
+    -- 1.constructor(props){
+        super(props);
+        this.addLikes = this.addLikes.bind(this);
+    }
+    onClick={this.addLikes}  === >方法没有()
+    -- 2.onClick={()=>{this.addLikes()}} ===>方法有()
+4.修改数据方法：
+this.setState({
+     likes:++this.state.likes
+});

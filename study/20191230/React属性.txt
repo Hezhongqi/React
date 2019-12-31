@@ -1,0 +1,41 @@
+Props:属性  ----------只读的
+-- 组件就像一个函数，接受特定的输入（Props），产出特定的输出React Elements
+-- V= f(Props)
+
+
+-- 这里可以统一一个文件引入，比如app.js
+-- 组件的两种写法：都
+    --函数形式
+        const 组件名 = (props) => {
+            return ()
+        }
+    --class类形式
+        class 组件名 extends React.Component {
+            render() {
+                return ()
+            }
+        }
+    -- 提出疑问，是不是所有的组件可以函数形式表现？
+
+-- key的作用：高效
+{ tags.map((tag,index)=>(
+        //高效 key
+        <span className="badge badge-pill badge-primary" key={index}>{tag}</span>
+))}
+--属性是只读的，不然会报错 ----》name is read-only
+-- 所有组件，必须向纯函数一样，使用Props，所有不能修改
+-- 纯函数与非纯函数
+    --纯函数
+    f(a,b) {
+        return a +b;
+    }
+    --非纯函数
+    f(a,b) {
+        a = a + b;
+        return a;
+    }
+==========>react遵循纯函数写法
+-- 如何更改数据 State?
+详解state
+
+

@@ -1,0 +1,60 @@
+1.import:代码解释：上述import语句仅仅导入了exportDemo.js文件中定义为默认的接口即i = 0,所以打印输出0
+        import和export只能出现在模块的最外层（顶层）结构中，否则报错
+        由于es6模块是静态加载的，因此import和export不能出现在判断等动态语句中
+        import variable from './exportDemo'; //exportDemo必须export defulat
+        console.log(variable); // 0;
+        一个模块中只能有一个默认导出export default，但是却可以有任意命名导出（0个、1个、多个），你也可以如下，一次性将他们导入
+
+// home.js
+import { user } from './user'           // 正确，因为user.js中有命名为user的export
+import { user2 } from './user'          // 错误！因为user.js中没有命名为user2的export
+import { anyUser } from './user'        // 错误！因为user.js中没有命名为anyUser的export
+
+import user, { user2, anyUser } from './user'
+
+
+2.ES6 Module
+es6 module 中模块加载方式是静态加载，因此import和export不能出现在判断等动态语句
+采用import获取的是模块接口的引用，当模块内部发生改变是，import出的接口也会对应改变
+es6 module内部自动采用严格模式
+
+
+3.如何挂载组件  ReactDOM.render
+ReactDOM.render(<App />, document.getElementById('root'));
+两个参数：1.类似html的表达式  2.dom节点,index.html
+
+4.Render方法：组件渲染出来的结果
+
+5.ReactDOM.render:挂载组件到root节点上
+
+6.奇怪的html?
+render() {
+        return (
+            <div>
+                <h1>hello react</h1>
+
+            </div>
+        )
+}
+ ====>JSX  JS语法扩展
+ ====>JSX=====>可以不用{}
+ ====>其他js表达式，{}
+ ====>两个特例：className="this" htmlFor=""
+
+7.JSX  ====> 编译 ==== > babel ===>编译成支持低版本游览器的语法
+<Welcome /> =====> React.createElement(Welcome, null);
+    -- Welcome：大写 == >Welcome ===>构造方法，而不是字符串---->自定义class  Component
+           --用处：识别自定义Component还是html标签
+
+ =====>语法糖======>    React.createElement()
+ =====>一个对象 ======>  ReactElement
+ =====>可以直接这样写：用jsx来替代
+  return React.createElement("h1", {
+             className: "test"
+         }, "a1", React.createElement("span", {
+             className: "tets1"
+         }, " a2"));
+
+
+
+

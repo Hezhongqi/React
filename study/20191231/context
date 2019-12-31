@@ -1,0 +1,19 @@
+1.props
+    ---自上到下单向传递
+2.context:提供在组件中共享此类值的方法
+3.但是对于全局而言，props很烦的
+    ---比如某个样式：this.state={theme:'light'}
+    ---app.js需要：
+    <Header theme={this.state.theme}/>
+    ---user.js中button需要,也要一层一层传进去
+    <User theme={this.state.theme}/>
+4.context:组件中全局数据  ------------使用Context整合多页面数据和行为
+       ---不要仅仅为了避免在几个层级下的组件传递props而使用context
+       ---实际是一个object
+       ---两个变量
+
+5.react独特的数据流以及状态管理
+6.Mock环境搭建 ----前后端分离
+7.部署上线
+8.JSON-server Axios完成异步逻辑 Leacloud完成部署
+9.测试
