@@ -1,0 +1,8 @@
+1.React 网页 -->Native 原生  -->VR
+2.React Fiber --->React 16以后对应的框架  算法优化 核心级的概念
+3.style = {{}}
+4.render 只能返回一个div,
+<div> <div></div></div> =====》导致多一个div
+最外层不要div === 》<React.Fragment><div></dic></React.Fragment>
+5.import React,{Component} from 'react'
+6.正确写法有 tags.map(item=> item) 、tags.map(item=> (item)) 、tags.map(item=> (<li>{item}</li>))

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f0de1f3-8c6a-4481-8bab-371b13a74eab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/wb_hzq545513.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/20191227/说明.txt" beforeDir="false" afterPath="$PROJECT_DIR$/study/20191227/说明.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/reason" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,7 +63,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\WebStorm 2019.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunManager">
@@ -120,7 +112,11 @@
       <workItem from="1577769663136" duration="844000" />
       <workItem from="1577771740862" duration="1273000" />
       <workItem from="1577773028425" duration="1113000" />
-      <workItem from="1577774530960" duration="2637000" />
+      <workItem from="1577774530960" duration="4792000" />
+      <workItem from="1577781337128" duration="2404000" />
+      <workItem from="1577930491878" duration="1137000" />
+      <workItem from="1577932727121" duration="3530000" />
+      <workItem from="1577962417056" duration="1431000" />
     </task>
     <servers />
   </component>
@@ -132,14 +128,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577773342278" />
+    <state x="929" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577964287149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="929" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1577964287149" />
+    <state x="774" y="415" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577932201265">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="774" y="415" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577932201265" />
     <state x="690" y="300" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1577772193651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="300" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1577772193651" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1577773013909">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1577932191980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577773013909" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577932191980" />
     <state width="1899" height="274" key="GridCell.Tab.0.bottom" timestamp="1577774516191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -156,14 +160,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577774516191" />
-    <state x="487" y="147" width="1367" height="716" key="SettingsEditor" timestamp="1577775162661">
+    <state x="487" y="147" width="1367" height="716" key="SettingsEditor" timestamp="1577932711991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="487" y="147" width="1367" height="716" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577775162661" />
-    <state x="929" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1577776350731">
+    <state x="487" y="147" width="1367" height="716" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577932711991" />
+    <state x="929" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1577778544960">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="929" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577776350731" />
+    <state x="929" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577778544960" />
   </component>
   <component name="masterDetails">
     <states>
