@@ -1,0 +1,30 @@
+{
+  "version": "2.x",
+  "context": "src",
+  "entry": "index.js",
+  "components": "components",
+  "containers": "containers",
+  "models": "models",
+  "modelEntry": "app.js",
+  "constants": "constants",
+  "styles": "styles",
+  "utils": "utils",
+  "intl": {
+    "locale": "zh",
+    "products": [
+      {
+        "group": "aliyun",
+        "name": "wind-v2",
+        "identifier": "ALIYUN_WIND_MESSAGE"
+      }
+    ],
+    "messages": "locales/messages.js"
+  },
+  "routes": "routes",
+  "routeEntry": "routes/index.js",
+  "mocks": {
+    "host": "http://mocks.alibaba-inc.com",
+    "product": "wind",
+    "projectUrl": "http://mocks.alibaba-inc.com/project/wind"
+  }
+}
