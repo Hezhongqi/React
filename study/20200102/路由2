@@ -1,0 +1,4 @@
+1.重要的区别是
+HashRouter是通过hash路径访问，在浏览器直接输入地址可以访问，
+BrowserRouter通过h5的history api访问，输入地址时会像服务器查询
+2.

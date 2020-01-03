@@ -1,0 +1,113 @@
+1.React Router
+    --V5 --V4 --V3
+    --V4和V5版本的用法和理念基本上是一致的
+2.React Router分成了两个大的方向：
+    --React Web Router 和 React Native Router
+    --web项目：npm install --save react-router-dom
+3.配置路由
+    --两个组件(component): BrowserRouter 和 Route
+        --import { BrowserRouter, Route } from "react-router-dom";
+        --BrowserRouter 组件就像是一个文具盒，Route组件就像是一件件文具一样，需要放在这个盒子里
+    --BrowserRouter：
+        --React Router的核心
+    --Route：
+        --React Router的具体配置
+    --方式
+        <BrowserRouter>
+               {/*基本用法*/}
+               <Route path ="/help" component={Help}/>
+               <Route path ="/set" component={Set}/>
+         </BrowserRouter>
+    --http://localhost:3000/help，React Router 会匹配到 <Route path="/help" component={Help} /> 这一条记录
+4.在React中通过链接跳转路由  --Link
+    --方式
+        <BrowserRouter>
+             {/* 注意 Link 组件一定要位于 BrowserRouter 组件中 */}
+            <ul>
+                <li><Link to="/help">Help</Link></li>
+                <li><Link to="/set">Set</Link></li>
+            </ul>
+            {/*基本用法*/}
+                <Route path ="/help" component={Help}/>
+                <Route path ="/set" component={Set}/>
+        </BrowserRouter>
+    --Link 需要在BrowserRouter内
+5.React Router 的进阶使用
+    --1. Route 的匹配规则
+        --参数：path、exact、component、render、children
+            --<Route component={Wallet} />  --默认地址
+                -- 在配置Route的时候没有指定 path 属性，这时只要你打开项目，无论你访问什么路径，这个Route都会匹配到
+            --<Route path="/" component={Index} /> --非严格匹配，根据path来确定
+                --配置Route的时候，指定 path="/" ，和上面配置的效果一样，只要你打开项目，
+                  无论你访问什么路径，这个Route都会匹配到。这种配置方式我们成为 "非严格匹配" ，
+                  你在项目中访问的任何一个路径，里面都会包含path="/" 的路径。所以无论访问什么路径，
+                  这个Route都会匹配到
+            --<Route exact path="/" component={Index} /> --严格匹配 --初始页面
+                --和上面一条的配置方式不同，这里在配置Route的时候，传入了 exact 属性，
+                  说明这个配置方式是 "严格匹配" ，只有当我们访问项目的根路径的时候，
+                  才会匹配到这个Route。比如：localhost:3000/
+            --<Route path="/help" component={Help} />
+                --一条很常规的Route配置方式，当我们访问"/help"路径的时候，匹配到这个Route，进而渲染出对应的component
+            --<Route path="/render" render={ () => { return <h1>我是匹配到的路由</h1> } } />
+                --和上一条路由配置不同的是，这里没有component属性，
+                  而是换成了render属性。该属性是一个函数，
+                  当匹配到这个Route的时候，页面将会渲染出这个函数返回的内容。
+    --2. Switch 组件的使用
+        形象说明：Switch组件的使用其实非常简单，
+        举个例子：如果说BrowserRouter组件是一个大的文具盒的话，那么Switch组件就是这个大文具盒中的一个小袋子，
+        Route组件就是这个小袋子中的一支铅笔，我们需要铅笔的时候，直接从这个小袋子里面取出一支即可。
+        注意：是最多只能取出一支铅笔
+        --当进行路由匹配的时候，一旦匹配到了Switch组件中的一个Route，那么就不会再继续匹配
+        --写法
+        <BrowserRouter>
+            <Switch>
+                <Route component={Wallet} />
+                <Route path="/" component={Index} />
+                <Route path="/help" component={Help} />
+                <Route path="/render" render={() => { return <h1>我是匹配到的路由</h1> }} />
+            </Switch>
+        </BrowserRouter>
+        --解释说明：如果我们访问 "localhost:3000/help" 路径，
+        虽然前三个Route都匹配，但是页面只会渲染第一个匹配到的Route，其他的都被忽略
+        -- 这个组件有什么作用呢？
+            --可以在以下场景中发挥作用：如果当前路径没有匹配到任何Route的时候，路由跳转到 404 页面，那么就可以这样写
+        <BrowserRouter>
+            <Switch>
+                <Route path="/set" component={Set} />
+                <Route path="/help" component={Help} />
+                <Route path="/render" render={() => { return <h1>我是匹配到的路由</h1> }} />
+                <Route component={NotFound} />
+            </Switch>
+        </BrowserRouter>
+        --解释说明：通过上面的配置，如果当前路径有匹配到最后一个之外的Route，那么就显示对应内容，不再继续匹配；
+                   如果没有匹配到最后一个之外的Route，就显示最后一个Route，因为这个Route可以匹配任何路径。
+                   可以把这个Route对应到 404 页面
+
+    3. 匹配到的 Route 如何渲染内容  component={Help}
+    4. 对 React Router 的一点解释
+        -- 只要打包编译之后，两个组件满足Route组件位于BrowserRouter组件中就可以
+
+    5. 如何配置嵌套路由 --进行配置二级路由，即嵌套路由
+        -- this.props.match
+        {/* 第一种写法 */}
+        <Link to={`${this.props.match.path}/system`}>system</Link>
+        <Route path={`${this.props.match.path}/system`} component={SetSystem} />
+
+        {/* 第二种写法 */}
+        <Link to="/set/system">system</Link>
+        <Route path="/set/system" component={SetSystem} />
+
+    6.在设置嵌套路由的时候，Route组件怎么没有包含在BrowserRouter组件中？
+       --在使用webpack将代码打包打包编译之后，Route组件已经包含在BrowserRouter组件中了
+       --Route组件包含于Set组件中，Set组件包含于App组件中，App组件包含在BrowserRouter中。所以Route组件已经包含在BrowserRouter组件中
+
+6.
+
+
+
+
+
+
+
+
+
