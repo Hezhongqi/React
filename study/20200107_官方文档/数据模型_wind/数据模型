@@ -1,0 +1,22 @@
+1.数据模型是关于业务中数据、行为和流程的描述，你可以将其想象为大脑和中枢系统，
+    所有系统中需要用到的数据、状态和流程，都可以在数据模型中进行描述
+2.在 Wind 中，基础数据模型使用 dva 封装的基于Redux 以及 Redux-Saga 提供的特性进行抽象，
+    用以描述数据和行为。
+3.def add model counter
+index.js [模块索引]
+model.js [数据模型描述]
+actions.js [提供 action 创建函数]
+selectors.js [提供状态选择器]
+constants.js [提供常量，如 namespace]
+services.js [提供异步访问接口]
+
+4.
+    1.首先设计数据模型
+        设计数据模型可以看做是设计数据库表并定义数据访问接口
+    2.容器组件
+        容器组件将视图层和数据层连接起来，形成完整的用户界面
+        def add container Counter
+        connect:
+        • 将数据模型中的 state 映射到组件 props
+        • 将数据模型中的 reducer 或 effect 以 dispatch(action) 的形态映射到组件 props
+        • 当数据模型中的 state 发生变化时，通知关联的组件进行更新

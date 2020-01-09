@@ -9,7 +9,7 @@ import NotFound from "../NotFound";
 import Footer from "../Footer";
 import LoginRoute from "../LoginRoute";
 import Login, { Logout } from '../Login'
-
+import Counter from "../../containers/Counter";
 //在路由中，你可以使用参数来描述或约束组件的行为
 const App = () =>(
     <div>
@@ -29,6 +29,7 @@ const App = () =>(
           {/*:id 参数变为可选参数*/}
           <Route exact path="/detail/:id?" component={Detail}/>
           <Route exact path="/404" component={NotFound}/>
+          <Route exact path="/counter" component={Counter}/>
         {/*<Route
             exact
             path="/"

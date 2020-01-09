@@ -13,6 +13,8 @@ import instanceList from './models/instanceList'
 import instanceInfo from './models/instanceInfo'
 import cpuMonitor from './models/cpuMonitor'
 import './styles/index.less'
+import counterModel from './models/counter'
+import userModel from './models/user'
 //默认情况下，Wind 会创建一个使用 browserHistory 的 dva 实例
 // 生产环境中，你可能需要对应用服务做一些配置，让其支持 browserHistory
 const app = dva({
@@ -30,6 +32,8 @@ app.use(register(app));
 app.model(instanceList);
 app.model(instanceInfo);
 app.model(cpuMonitor);
+app.model(counterModel)
+app.model(userModel)
 /***********************************部署数据模型End***************************************/
 
 /*************************************部署路由Start**************************************/
